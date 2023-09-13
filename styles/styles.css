@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-color: #dbeafe;
+}
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  /* border: 1px solid gray; */
+  color: #3b82f6;
+  padding: 1%;
+  align-items: center;
+  background-color: #ffffff;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.logo {
+  width: 3%;
+}
+
+.modal {
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  width: 100vw;
+  height: 100vh;
+
+  visibility: hidden;
+}
+
+.formContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 300px;
+  height: 350px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  /* background-color: steelblue; */
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 5%;
+}
+
+form h3 {
+  font-size: 24px;
+}
+form input[type="number"],
+form input[type="text"] {
+  width: 75%;
+  height: 12%;
+  font-size: 20px;
+  border-radius: 5px;
+  border-style: none;
+  padding: 2%;
+  border: 1px solid #d4d4d8;
+
+  /* background-color: #fafafa; */
+}
+
+form input[type="number"],
+form input[type="text"]::placeholder {
+  color: #999;
+}
+form input[type="number"]:focus,
+form input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #3b82f6;
+}
+
+form button {
+  width: 75%;
+  height: 12%;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+form button:hover {
+  background-color: #3575dd;
+}
+
+.read-it {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  /* border: 1px solid red; */
+  width: 100%;
+}
