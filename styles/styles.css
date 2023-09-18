@@ -8,26 +8,55 @@
 
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: #dbeafe;
+  font-family: "Raleway", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 html {
-  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
   display: flex;
   /* border: 1px solid gray; */
   color: #3b82f6;
-  padding: 1%;
+  padding: 30px 50px;
   align-items: center;
+  justify-content: space-between;
   background-color: #ffffff;
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  width: 3%;
+  width: 10%;
+}
+
+.navbar button {
+  width: 112px;
+  height: 46px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar button:hover {
+  background-color: #3575dd;
 }
 
 .modal {
@@ -109,4 +138,23 @@ form button:hover {
   gap: 5%;
   /* border: 1px solid red; */
   width: 100%;
+}
+
+.container {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 80px 50px;
+  gap: 50px;
+}
+
+.card-container {
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 10px 20px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
 }
