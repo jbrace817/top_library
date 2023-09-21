@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Library</title>
   </head>
   <body>
@@ -11,14 +18,14 @@
       <div class="formContainer">
         <form action="" method="post">
           <h3>Add a New Book</h3>
-          <input type="text" placeholder="Title" />
-          <input type="text" placeholder="Author" />
-          <input type="number" placeholder="Pages" />
+          <input type="text" placeholder="Title" id="title" />
+          <input type="text" placeholder="Author" id="author" />
+          <input type="number" placeholder="Pages" id="pages" />
           <div class="read-it">
             <label for="read">Read it? </label>
             <input type="checkbox" name="read" id="read" />
           </div>
-          <button type="button">Add to Library</button>
+          <button type="button" class="add-library">Add to Library</button>
         </form>
       </div>
     </div>
@@ -46,79 +53,173 @@
     <div class="container">
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town Lorem"
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
-        </div>
-      </div>
-      <div class="card-container">
-        <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
-        </div>
-      </div>
-      <div class="card-container">
-        <div class="card">
-          <p>Title:</p>
-          <p>Author:</p>
-          <p>Pages:</p>
+          <p class="card-left">Title:</p>
+          <p class="card-right">
+            "Alice in Wonderland is coming to town lorem "
+          </p>
+          <p class="card-left">Author:</p>
+          <p class="card-right">James Brace left right</p>
+          <p class="card-left">Pages:</p>
+          <p class="card-right">324</p>
+          <p class="card-left center">Read:</p>
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <div class="card-bottom">
+            <div class="trash">
+              <i class="fa-solid fa-trash-can fa-lg"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
