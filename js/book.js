@@ -8,13 +8,16 @@ const btn_addToLibrary = document.querySelector(".add-library");
 //LIBRARY Array
 const myLibrary = [];
 
-//BOOK Object Variables
+//FORM INPUT - BOOK OBJECT KEYS
 const title = document.getElementById("title");
 const author = document.getElementById("author");
 const pages = document.getElementById("pages");
 
 //CARD
 const cardContainer = document.querySelector(".container");
+
+//CHECKBOX
+const chk_readBook = document.getElementById("read");
 
 //MODAL Window
 btn_addBook.addEventListener(
@@ -40,12 +43,23 @@ function closeModal() {
 
 //TOGGLE
 function toggleSwitch() {
-  const toggle = document.querySelectorAll(".fa-toggle-on");
-  toggle.forEach((tog) => {
+  const toggleAll = document.querySelectorAll(".fa-toggle-on");
+  toggleAll.forEach((tog) => {
     tog.addEventListener("click", () => {
       tog.classList.toggle("off");
     });
+    if (readBook.checked) {
+      tog.classList.remove("off");
+    }
   });
+}
+
+function readBook(id) {
+  const toggle = document.getElementById(id + "-toggle");
+  console.log(toggle);
+  if (chk_readBook.checked) {
+    toggle.classList.remove("off");
+  }
 }
 
 //BOOK OBJECT
@@ -70,7 +84,7 @@ function createCard(index) {
           <p class="card-left">Pages:</p>
           <p class="card-right">${myLibrary[index].pages}</p>
           <p class="card-left center">Read:</p>
-          <i class="fa-solid fa-toggle-on fa-2x"></i>
+          <i class="fa-solid fa-toggle-on fa-2x off" id="${index}-toggle"></i>
           <div class="card-bottom">
             <div class="trash">
               <i class="fa-solid fa-trash-can fa-lg"></i>
@@ -92,9 +106,12 @@ function addBookToLibrary() {
   title.value = "";
   author.value = "";
   pages.value = "";
+
   modal.style.visibility = "hidden";
   toggleSwitch();
+  readBook(index);
   removeCard();
+  chk_readBook.checked = false;
 }
 
 btn_addToLibrary.addEventListener("click", addBookToLibrary);
