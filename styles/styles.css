@@ -29,7 +29,9 @@ html {
   display: flex;
   /* border: 1px solid gray; */
   color: var(--main-color);
-  padding: 30px 50px;
+  /* padding: 30px 50px; */
+  padding: calc(24px + (30 - 24) * ((100vw - 300px) / (1600 - 300)))
+    calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)));
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
@@ -44,14 +46,22 @@ html {
   align-items: center;
 }
 
+.logo-container h1 {
+  font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
+}
+
 .logo {
-  width: 10%;
+  /* width: 10%; */
+  width: calc(30px + (44 - 30) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .navbar button {
-  width: 112px;
-  height: 46px;
-  font-size: 20px;
+  /* width: 112px;
+  height: 46px; */
+  width: calc(90px + (112 - 90) * ((100vw - 300px) / (1600 - 300)));
+  height: calc(36px + (46 - 36) * ((100vw - 300px) / (1600 - 300)));
+
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
   cursor: pointer;
   background-color: var(--main-color);
   border: none;
@@ -68,8 +78,10 @@ html {
   position: absolute;
   background-color: hsla(0, 0%, 0%, 0.5);
   width: 100vw;
+  /* max-width: 100%; */
   height: 100vh;
-
+  /* max-height: 100%; */
+  z-index: 5;
   visibility: hidden;
 }
 
@@ -81,7 +93,9 @@ html {
   transform: translate(-50%, -50%);
   text-align: center;
   width: 300px;
+  max-width: 100%;
   height: 350px;
+  max-height: 100%;
   border: 1px solid gray;
   border-radius: 10px;
   /* background-color: steelblue; */
@@ -113,7 +127,8 @@ form input[type="text"] {
 }
 
 form input[type="number"],
-form input[type="text"]::placeholder {
+form input[type="text"]::placeholder,
+form input[type="number"]::placeholder {
   color: #999;
 }
 form input[type="number"]:focus,
