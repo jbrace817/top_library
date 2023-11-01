@@ -63,10 +63,18 @@ function readBook(id) {
 }
 
 //BOOK OBJECT
-function Book(title, author, pages) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
+// function Book(title, author, pages) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+// }
+
+class Book {
+  constructor(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+  }
 }
 
 //ADD TO LIBRARY
